@@ -1,0 +1,268 @@
+/* Reseteo de la página para consistencia entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  font-family: 'Fredoka', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Encabezado con colores personalizados MEXCAR+ */
+.headerTechiY {
+  background: #3f4e65;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+.headerTechiY .logo {
+  background-color: #ffffff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.headerTechiY .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+}
+
+.nav-button {
+  color: #3f4e65;
+  background-color: #00a8e8;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #ffffff;
+  color: #3f4e65;
+  transform: translateY(-2px);
+}
+
+/* Sección Hero con Video */
+.hero-fundacion {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.welcome-box {
+  background: rgba(0, 168, 232, 0.85);
+  display: inline-block;
+  padding: 12px 50px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-box h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #3f4e65;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: 3px solid #00a8e8;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+  background: #00a8e8;
+  color: #ffffff;
+  border-color: #3f4e65;
+}
+
+main section {
+  padding: 50px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Sección Quiénes Somos */
+.fundacion {
+  background-color: #b9ddff;
+}
+
+.fundacion h2 {
+  margin-bottom: 20px;
+  color: #3f4e65;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.fundacion .content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333333;
+  font-size: 1.1rem;
+}
+
+/* Footer con paleta MEXCAR+ */
+footer, #contacto-funTechIY {
+  background-color: #3f4e65;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contacto, .redes-sociales {
+  padding: 0 10px;
+}
+
+.contacto h3, .redes-sociales h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #b9ddff;
+}
+
+.contacto address p {
+  margin: 5px 0;
+}
+
+.contacto a {
+  color: #EEE3C8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}
+
+.redes-iconos a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.redes-iconos a:hover {
+  color: #00a8e8;
+}
+
+.footer-bottom {
+  border-top: 1px solid #00a8e8;
+  padding-top: 20px;
+  position: relative;
+}
+
+.scroll-to-top-btn {
+  background-color: #b9ddff;
+  border: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #00a8e8;
+  color: #ffffff;
+  transform: translateX(-50%) scale(1.1);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  margin: 0;
+}

@@ -2,10 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Página de MEXCAR+ accesorios para coche y tractocamión">
-    <meta name="keywords" content="Accesorios, Coche, Tractocamión, Limpiaparabrisas, Seguridad">
+    <meta name="description" content="MEXCAR+ - Accesorios y autopartes para coche y tractocamión">
+    <meta name="keywords" content="Autopartes, Accesorios, Coche, Tractocamión, Refacciones">
     <meta name="author" content="Diego Guerrero">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>MEXCAR+ | Accesorios para Coche y Tractocamión</title>
 </head>
@@ -13,15 +14,15 @@
 
     <header class="headerTechiY">
         <div class="logo">
-            <img src="img/LOGO.JPG" alt="Logo MEXCAR+" class="logo">
+            <img src="img/LOGO.JPG" alt="Logo MEXCAR+">
         </div>
 
         <nav class="nav">
             <ul>
                 <li><a href="#inicio" class="nav-button">Inicio</a></li>
-                <li><a href="#quienes-somos" class="nav-button">Quiénes Somos</a></li>
-                <li><a href="#productos" class="nav-button">Productos</a></li>
-                <li><a href="#contacto" class="nav-button">Contacto</a></li>
+                <li><a href="#fundacion" class="nav-button">Empresa</a></li>
+                <li><a href="#servicios" class="nav-button">Productos</a></li>
+                <li><a href="#contacto-funTechIY" class="nav-button">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -36,16 +37,67 @@
             </div>
 
             <div class="hero-content">
-                <h2>Bienvenidos a MEXCAR+</h2>
-                <p>Personaliza tu coche y tractocamión con los mejores accesorios del mercado.</p>
+                <div class="welcome-box">
+                    <h2>Bienvenidos</h2>
+                </div>
+                <p>Personaliza y equipa tu coche y tractocamión con las mejores autopartes del mercado.</p>
 
                 <div class="hero-buttons">
-                    <a href="#productos" class="btn">Catálogo</a>
-                    <a href="#contacto" class="btn">Contacto</a>
+                    <a href="#servicios" class="btn">Catálogo</a>
+                    <a href="#contacto-funTechIY" class="btn">Contacto</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- INICIO DE LA SECCIÓN SOBRE NOSOTROS -->
+        <section id="fundacion" class="fundacion">
+            <h2>Quiénes Somos</h2>
+            <div class="content">
+                <p>MEXCAR+ es un negocio especializado en la venta de autopartes y accesorios de alta calidad para coches y tractocamiones, ofreciendo refacciones confiables y el mejor equipo para tus vehículos.</p>
             </div>
         </section>
     </main>
 
+    <footer id="contacto-funTechIY">
+        <div class="footer-grid">
+            <div class="contacto">
+                <h3>Contacto</h3>
+                <address>
+                    <p>
+                        <i class="fa fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/5F3yxsWKsaLGj7zK8?g_st=in" target="_blank" rel="noreferrer noopener">
+                            <span style="color: #b9ddff; font-weight: bold">Ubicación: </span> Parque de los Niños, Calz. de los Jinetes SN, 54000 Tlalnepantla, Méx.
+                        </a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone"></i>
+                        <span style="color: #b9ddff; font-weight: bold">Teléfono: </span> <a href="tel:+5611139336">56 1113 9336</a>
+                    </p>
+                </address>
+            </div>
+            
+            <div class="redes-sociales">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="redes-iconos">
+                    <a href="https://www.facebook.com" aria-label="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com" aria-label="Síguenos en TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <button onclick="scrollToTop()" class="scroll-to-top-btn" aria-label="Volver al inicio de la página">
+                <i class="fa fa-arrow-up"></i>
+            </button>
+            <p class="copyright">&copy; 2026 MEXCAR+. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
