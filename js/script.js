@@ -1,7 +1,12 @@
-// DATOS PARA FILTRAR //
+
+// ======================================
+// PRODUCTOS MEXCAR+
+// ======================================
 
 const dwdiego = [
-    // proyectos //
+
+    // ACCESORIOS
+
     {
         id: 1,
         name: "Volante Deportivo de Alto Rendimiento",
@@ -9,6 +14,7 @@ const dwdiego = [
         genero: "proyectos",
         description: "Diseño ergonómico con excelente agarre para mejorar la experiencia de manejo y estética interior."
     },
+
     {
         id: 2,
         name: "Parasol",
@@ -16,6 +22,7 @@ const dwdiego = [
         genero: "proyectos",
         description: "Protección térmica plegable para el parabrisas, ideal para mantener el interior de tu vehículo fresco."
     },
+
     {
         id: 3,
         name: "Juego de Plumas Limpiaparabrisas",
@@ -23,6 +30,7 @@ const dwdiego = [
         genero: "proyectos",
         description: "Barrido silencioso y visión clara bajo lluvia intensa con ajuste universal para la mayoría de vehículos."
     },
+
     {
         id: 4,
         name: "Mini Bote de Basura Portátil",
@@ -31,7 +39,9 @@ const dwdiego = [
         description: "Accesorio compacto y elegante de fácil colocación para mantener tu coche o tractocamión limpio y ordenado."
     },
 
-    // unete //
+
+    // REFACCIONES
+
     {
         id: 5,
         name: "Bastón Candado de Seguridad",
@@ -39,6 +49,7 @@ const dwdiego = [
         genero: "unete",
         description: "Protección antirrobo reforzada en acero de alta resistencia para todo tipo de autos y camionetas."
     },
+
     {
         id: 6,
         name: "Cepillo para Lavar Coches",
@@ -46,6 +57,7 @@ const dwdiego = [
         genero: "unete",
         description: "Cepillo de cerdas suaves con bastón telescópico para una limpieza profunda y segura de la pintura."
     },
+
     {
         id: 7,
         name: "Cubrevolante - Versión Alterna 1",
@@ -53,6 +65,7 @@ const dwdiego = [
         genero: "unete",
         description: "Variante de diseño en agarre y textura para personalizar la comodidad al conducir."
     },
+
     {
         id: 8,
         name: "Cubrevolante - Versión Alterna 2",
@@ -60,50 +73,160 @@ const dwdiego = [
         genero: "unete",
         description: "Variante adicional de protección y estilo deportivo para el volante de tu vehículo."
     }
+
 ];
 
-// Obtener los contenedores y botones del DOM
-const dwdiegoContainer = document.getElementById("programa-container");
-const filterButtons = document.querySelectorAll(".filter-btn");
 
-// Función para renderizar las tarjetas 
+// ======================================
+// OBTENER CONTENEDOR
+// ======================================
+
+const dwdiegoContainer = document.getElementById("programa-container");
+
+
+// ======================================
+// FUNCIÓN PARA CREAR TARJETAS
+// ======================================
+
 function renderDw(genero) {
+
     let dwdiegoToRender = [];
+
     if (genero === "all") {
+
         dwdiegoToRender = dwdiego;
+
     } else {
-        dwdiegoToRender = dwdiego.filter(item => item.genero === genero);
+
+        dwdiegoToRender = dwdiego.filter(
+            item => item.genero === genero
+        );
+
     }
+
+
+    // LIMPIAR CONTENEDOR
 
     dwdiegoContainer.innerHTML = "";
 
-    dwdiegoToRender.forEach(item => {
+
+    // COMPROBAR PRODUCTOS
+
+    if (dwdiegoToRender.length === 0) {
+
+        dwdiegoContainer.innerHTML =
+        '<p class="text-center w-100">No hay productos disponibles en esta categoría.</p>';
+
+        return;
+
+    }
+
+
+    // GENERAR TARJETAS
+
+    dwdiegoToRender.forEach(dw => {
+
         const card = document.createElement("figure");
-        card.classList.add("proyecto-card");
-        card.setAttribute("data-gender", item.genero);
+
+        card.className = "proyecto-card";
+
+        card.dataset.gender = dw.genero;
+
 
         card.innerHTML = `
+
             <div class="img-container">
-                <img src="${item.image}" alt="${item.name}">
+
+                <img
+                    src="${dw.image}"
+                    alt="${dw.name}"
+                    loading="lazy"
+                >
+
             </div>
-            <figcaption>${item.name}</figcaption>
+
+            <figcaption>
+                ${dw.name}
+            </figcaption>
+
             <div class="card-description">
-                <p>${item.description}</p>
+
+                <p>
+                    ${dw.description}
+                </p>
+
             </div>
+
         `;
+
+
         dwdiegoContainer.appendChild(card);
+
     });
+
 }
 
-// Event listener para los botones de filtro
+
+// ======================================
+// FILTROS DE PRODUCTOS
+// ======================================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+
 filterButtons.forEach(button => {
+
     button.addEventListener("click", () => {
-        filterButtons.forEach(btn => btn.classList.remove("active"));
+
+        const genero = button.dataset.category;
+
+
+        // QUITAR CLASE ACTIVA
+
+        filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        // ACTIVAR BOTÓN SELECCIONADO
+
         button.classList.add("active");
-        const categoria = button.getAttribute("data-category");
-        renderDw(categoria);
+
+
+        // MOSTRAR PRODUCTOS
+
+        renderDw(genero);
+
     });
+
 });
 
-// Renderizar todos por defecto al cargar
-renderDw("all");
+
+// ======================================
+// BOTÓN VOLVER AL INICIO
+// ======================================
+
+function scrollToTop() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+// ======================================
+// INICIAR PÁGINA
+// ======================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    renderDw("all");
+
+});

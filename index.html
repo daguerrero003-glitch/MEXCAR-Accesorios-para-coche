@@ -1,18 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
     <meta name="description" content="MEXCAR+ - Accesorios y autopartes para coche y tractocamión">
     <meta name="keywords" content="Autopartes, Accesorios, Coche, Tractocamión, Refacciones">
     <meta name="author" content="Diego Guerrero">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>MEXCAR+ | Accesorios para Coche y Tractocamión</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>MEXCAR+ | Accesorios y Autopartes</title>
 </head>
+
 <body>
 
+    <!-- HEADER -->
     <header class="headerTechiY">
+
         <div class="logo">
             <img src="img/LOGO.JPG" alt="Logo MEXCAR+">
         </div>
@@ -20,189 +31,254 @@
         <nav class="nav">
             <ul>
                 <li><a href="#inicio" class="nav-button">Inicio</a></li>
-                <li><a href="#fundacion" class="nav-button">Empresa</a></li>
-                <li><a href="#programas" class="nav-button">Productos</a></li>
-                <li><a href="#contacto-funTechIY" class="nav-button">Contacto</a></li>
+
+                <li><a href="#fundacion" class="nav-button">
+                    Empresa
+                </a></li>
+
+                <li><a href="#programas" class="nav-button">
+                    Productos
+                </a></li>
+
+                <li><a href="#contacto-funTechIY" class="nav-button">
+                    Contacto
+                </a></li>
             </ul>
         </nav>
+
     </header>
 
+
     <main>
+
+        <!-- HERO / BIENVENIDA -->
         <section id="inicio" class="hero-fundacion">
+
             <div class="video-background">
+
                 <video autoplay muted loop playsinline>
                     <source src="video/Video Mexcar+.mp4" type="video/mp4">
-                    Tu navegador no soporta video en HTML5.
+
+                    Tu navegador no soporta video HTML5.
+
                 </video>
+
             </div>
 
             <div class="hero-content">
+
                 <div class="welcome-box">
-                    <h2>Bienvenidos</h2>
+                    <h2>Bienvenidos a MEXCAR+</h2>
                 </div>
-                <p>Personaliza y equipa tu coche y tractocamión con las mejores autopartes del mercado.</p>
+
+                <p>
+                    Equipa, protege y personaliza tu coche y tractocamión
+                    con accesorios y autopartes de calidad.
+                </p>
 
                 <div class="hero-buttons">
-                    <a href="#programas" class="btn">Catálogo</a>
-                    <a href="#contacto-funTechIY" class="btn">Contacto</a>
+
+                    <a href="#programas" class="btn">
+                        Conoce nuestros productos
+                    </a>
+
+                    <a href="#contacto-funTechIY" class="btn">
+                        Contáctanos
+                    </a>
+
                 </div>
+
             </div>
+
         </section>
 
-        <!-- Sección Empresa / Acerca de Nosotros -->
+
+        <!-- ACERCA DE NOSOTROS -->
         <section id="fundacion" class="fundacion">
+
             <h2>Acerca de nosotros</h2>
+
             <div class="content">
-                <p>MEXCAR+ es un negocio especializado en la venta de autopartes y accesorios de alta calidad para coches y tractocamiones, ofreciendo refacciones confiables y el mejor equipo para tus vehículos.</p>
+
+                <p>
+                    MEXCAR+ es un negocio especializado en la venta de
+                    autopartes y accesorios de alta calidad para coches
+                    y tractocamiones, ofreciendo refacciones confiables
+                    y el mejor equipo para tus vehículos.
+
+                    Nuestro objetivo es brindar productos que combinen
+                    funcionalidad, seguridad, comodidad y estilo,
+                    ayudando a nuestros clientes a mantener y
+                    personalizar sus vehículos.
+                </p>
+
             </div>
+
         </section>
 
-        <!-- Sección de Productos -->
+
+        <!-- PRODUCTOS -->
         <section id="programas" class="programas">
+
             <h2>Conoce nuestros productos</h2>
+
+            <p class="productos-intro">
+                Encuentra accesorios y refacciones para equipar
+                y mejorar tu vehículo.
+            </p>
+
+            <!-- FILTROS -->
             <div class="filter-buttons">
-                <button class="filter-btn active" data-category="all">Todos</button>
-                <button class="filter-btn" data-category="proyectos">Accesorios</button>
-                <button class="filter-btn" data-category="unete">Refacciones</button>
+
+                <button class="filter-btn active"
+                data-category="all" type="button">
+                    Todos
+                </button>
+
+                <button class="filter-btn"
+                data-category="proyectos" type="button">
+                    Accesorios
+                </button>
+
+                <button class="filter-btn"
+                data-category="unete" type="button">
+                    Refacciones
+                </button>
+
             </div>
 
-            <!-- Bloque de 8 tarjetas exactas (4 arriba y 4 abajo) -->
+            <!-- JAVASCRIPT GENERA LAS TARJETAS -->
             <div id="programa-container" class="cards-grid">
-                
-                <!-- 1. Volante Deportivo -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/IMG_0074.PNG" alt="Volante Deportivo">
-                    </div>
-                    <figcaption>Volante Deportivo de Alto Rendimiento</figcaption>
-                    <div class="card-description">
-                        <p>Diseño ergonómico con excelente agarre para mejorar la experiencia de manejo y estética interior.</p>
-                    </div>
-                </figure>
-
-                <!-- 2. Parasol (Corregido) -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/IMG_0075.PNG" alt="Parasol">
-                    </div>
-                    <figcaption>Parasol</figcaption>
-                    <div class="card-description">
-                        <p>Protección térmica plegable para el parabrisas, ideal para mantener el interior de tu vehículo fresco.</p>
-                    </div>
-                </figure>
-
-                <!-- 3. Plumas Limpiaparabrisas -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/IMG_0079.JPG" alt="Plumas Limpiaparabrisas">
-                    </div>
-                    <figcaption>Juego de Plumas Limpiaparabrisas</figcaption>
-                    <div class="card-description">
-                        <p>Barrido silencioso y visión clara bajo lluvia intensa con ajuste universal para la mayoría de vehículos.</p>
-                    </div>
-                </figure>
-
-                <!-- 4. Mini Bote de Basura -->
-                <figure class="proyecto-card" data-gender="proyectos">
-                    <div class="img-container">
-                        <img src="img/IMG_0083.JPG" alt="Mini Bote de Basura">
-                    </div>
-                    <figcaption>Mini Bote de Basura Portátil</figcaption>
-                    <div class="card-description">
-                        <p>Accesorio compacto y elegante de fácil colocación para mantener tu coche o tractocamión limpio y ordenado.</p>
-                    </div>
-                </figure>
-
-                <!-- 5. Bastón Candado -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/IMG_0076.JPG" alt="Bastón Candado de Seguridad">
-                    </div>
-                    <figcaption>Bastón Candado de Seguridad</figcaption>
-                    <div class="card-description">
-                        <p>Protección antirrobo reforzada en acero de alta resistencia para todo tipo de autos y camionetas.</p>
-                    </div>
-                </figure>
-
-                <!-- 6. Cepillo para Lavar Coches (Corregido) -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/IMG_0078.JPG" alt="Cepillo para Lavar Coches">
-                    </div>
-                    <figcaption>Cepillo para Lavar Coches</figcaption>
-                    <div class="card-description">
-                        <p>Cepillo de cerdas suaves con bastón telescópico para una limpieza profunda y segura de la pintura.</p>
-                    </div>
-                </figure>
-
-                <!-- 7. Cubrevolante Versión Alterna 1 -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/IMG_0081.PNG" alt="Cubrevolante Versión Alterna 1">
-                    </div>
-                    <figcaption>Cubrevolante - Versión Alterna 1</figcaption>
-                    <div class="card-description">
-                        <p>Variante de diseño en agarre y textura para personalizar la comodidad al conducir.</p>
-                    </div>
-                </figure>
-
-                <!-- 8. Cubrevolante Versión Alterna 2 -->
-                <figure class="proyecto-card" data-gender="unete">
-                    <div class="img-container">
-                        <img src="img/IMG_0082.PNG" alt="Cubrevolante Versión Alterna 2">
-                    </div>
-                    <figcaption>Cubrevolante - Versión Alterna 2</figcaption>
-                    <div class="card-description">
-                        <p>Variante adicional de protección y estilo deportivo para el volante de tu vehículo.</p>
-                    </div>
-                </figure>
-
             </div>
+
         </section>
+
     </main>
 
-    <!-- Footer -->
+
+    <!-- FOOTER -->
     <footer id="contacto-funTechIY">
+
         <div class="footer-grid">
+
+            <!-- CONTACTO -->
             <div class="contacto">
+
                 <h3>Contacto</h3>
+
                 <address>
+
                     <p>
                         <i class="fa fa-map-marker-alt"></i>
+
                         <span class="label">Ubicación:</span>
-                        <a href="https://maps.app.goo.gl/5F3yxsWKsaLGj7zK8?g_st=in" target="_blank" rel="noreferrer noopener">Parque de los Niños, Calz. de los Jinetes SN, 54000 Tlalnepantla, Méx.</a>
+
+                        <a href="https://maps.app.goo.gl/5F3yxsWKsaLGj7zK8?g_st=in"
+                        target="_blank"
+                        rel="noreferrer noopener">
+
+                            Parque de los Niños, Calz. de los Jinetes SN,
+                            54000 Tlalnepantla, Méx.
+
+                        </a>
                     </p>
+
                     <p>
                         <i class="fa fa-phone"></i>
+
                         <span class="label">Teléfono:</span>
-                        <a href="tel:+5611139336">56 1113 9336</a>
+
+                        <a href="tel:+525611139336">
+                            56 1113 9336
+                        </a>
                     </p>
+
+                    <p>
+                        <i class="fab fa-whatsapp"></i>
+
+                        <span class="label">WhatsApp:</span>
+
+                        <a href="https://wa.me/525611139336?text=Hola%2C%20me%20interesan%20sus%20productos%20de%20MEXCAR%2B"
+                        target="_blank"
+                        rel="noreferrer noopener">
+
+                            Enviar mensaje por WhatsApp
+
+                        </a>
+                    </p>
+
                 </address>
+
             </div>
-            
+
+
+            <!-- REDES SOCIALES -->
             <div class="redes-sociales">
+
                 <h3>Síguenos en redes sociales</h3>
+
                 <div class="redes-iconos">
-                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com" target="_blank" rel="noreferrer noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+
+                    <a href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.tiktok.com"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                    <a href="https://wa.me/525611139336"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
                 </div>
+
             </div>
+
         </div>
 
+
+        <!-- FOOTER INFERIOR -->
         <div class="footer-bottom">
-            <button onclick="scrollToTop()" class="scroll-to-top-btn" aria-label="Volver al inicio">
+
+            <button
+                onclick="scrollToTop()"
+                class="scroll-to-top-btn"
+                aria-label="Volver al inicio"
+                type="button">
+
                 <i class="fa fa-arrow-up"></i>
+
             </button>
-            <p class="copyright">&copy; 2026 MEXCAR+. Todos los derechos reservados.</p>
+
+            <p class="copyright">
+                &copy; 2026 MEXCAR+.
+                Todos los derechos reservados.
+            </p>
+
         </div>
+
     </footer>
 
-    <script>
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
-    <script src="script.js"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
+
 </body>
 </html>
