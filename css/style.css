@@ -215,7 +215,7 @@ section.programas h2 {
     border-color: #3f4e65;
 }
 
-/* GRID PARA 4 CARDS POR FILA IGUAL AL DE TU COMPA */
+/* GRID PARA 4 CARDS POR FILA */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -237,7 +237,7 @@ section.programas h2 {
     }
 }
 
-/* TARJETAS ESTILO COMPA */
+/* TARJETAS DE PRODUCTOS */
 .proyecto-card {
     background-color: #ffffff;
     border: 2px solid #00a8e8;
@@ -284,7 +284,50 @@ section.programas h2 {
     margin-top: auto;
 }
 
-/* 5. FOOTER */
+/* 5. COLUMNAS Y SECCIÓN DE FERIAS (DE LA PANTALLA DE LA CLASE) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.column img {
+    border: 4px solid #c701ce;
+    border-radius: 10px;
+}
+
+.row h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Aside para las ferias, promociones y eventos */
+.ferias {
+    text-align: center;
+    background-color: #b9ddff;
+    padding: 50px 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.ferias h3 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.ferias p {
+    margin-bottom: 10px;
+}
+
+/* 6. PIE DE PÁGINA (FOOTER) */
 footer, #contacto-funTechIY {
     background-color: #3f4e65;
     color: #ffffff;
